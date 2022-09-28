@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import VueFruitList from '../components/FruitList.vue';
+import ReactFruitList from '../components/FruitList';
+import SvelteFruitList from '../components/Fruitlist.svelte';
+
+const fruits = [
+  'Strawberry',
+  'Apple',
+  'Watermelon',
+  'Cherry',
+  'Banana',
+  'Blueberry',
+  'Honeydew',
+  'Mango',
+  'Peach',
+  'Cantalope',
+  'Pineapple',
+];
+
+fruits.sort((a, b) => a.localeCompare(b));
+---
+
+<Layout title="Fruit Page">
+  <h1>Fruit Page!</h1>
+
+  <!-- Astro -->
+  <h2>Astro Fruits!</h2>
+  <ul>
+    {fruits.map((fruit) => <li>{fruit}</li>)}
+  </ul>
+
+  <!-- Vue -->
+  <VueFruitList client:idle />
+
+  <!-- React -->
+  <ReactFruitList client:idle />
+
+  <!-- Svelte -->
+  <SvelteFruitList client:idle />
+</Layout>

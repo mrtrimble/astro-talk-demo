@@ -1,0 +1,23 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  li {
+    background: steelblue;
+    color: white;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-radius: 0.25rem;
+  }
+}
+
+
+  input, ul{
+    margin-block-end: 1rem;
+  }
+  div{
+    margin-block: 2rem;
+  }
