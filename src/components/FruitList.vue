@@ -48,6 +48,3 @@ const addFruit = (e) => {
     <div><strong>Total Fruits:</strong> {{ total }}</div>
   </section>
 </template>
-
-<style scoped lang="scss">
-</style>

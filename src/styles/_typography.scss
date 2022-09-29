@@ -14,7 +14,8 @@
 }
 
 h1, h2, h3, h4{
- font-family: 'Inter Tight', sans-serif; 
+ font-family: 'Figtree', sans-serif;
+ font-weight: 900;
 }
 
 h1{
@@ -34,7 +35,7 @@ h4{
 }
 
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: var(--step-1);
 }
 
@@ -52,4 +53,21 @@ article{
   > * + * {
     margin-block-start: 1.5rem;
   }
+  header{
+    margin-block: 2rem;
+    > * {
+      margin: 0;
+      padding: 0;
+    }
+    > * + * {
+      margin-block-start: 1.5rem;
+    }
+  }
+  p{
+    line-height: 1.7;
+  }
+}
+
+a{
+  color: var(--framework-color);
 }

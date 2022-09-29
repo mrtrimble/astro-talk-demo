@@ -12,7 +12,7 @@
 
 <section id="svelte-fruits">
   <h2><span class="framework">Svelte</span> Fruits</h2>
-  <p>Loads when visible in viewport.</p>
+  <p>Loads when enters viewport.</p>
   <form on:submit={addFruits}>
     <div class="input-group">
       <label for="svelte-fruit">Fruit</label>

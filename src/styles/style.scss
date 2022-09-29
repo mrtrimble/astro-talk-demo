@@ -1,20 +1,21 @@
-@use 'sass:meta';
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@900&family=Open+Sans:wght@400;700&display=swap');
+@use "sass:meta";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&display=swap")
+layer(typography);
+
+@layer reset, global, typography, components;
 
 @layer reset {
-  @include meta.load-css('reset');
-}
-
-@layer typography {
-  @include meta.load-css('typography');
+  @include meta.load-css("reset");
 }
 
 @layer global {
-  @include meta.load-css('global');
+  @include meta.load-css("global");
+}
+
+@layer typography {
+  @include meta.load-css("typography");
 }
 
 @layer components {
-  @include meta.load-css('components');
+  @include meta.load-css("components");
 }
-
-@layer reset, typography, global, components;

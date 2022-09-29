@@ -1,5 +1,5 @@
 :root {
-  --framework-color: steelblue;
+  --framework-color: #9f54f1;
 }
 
 body {
@@ -53,4 +53,16 @@ strong {
   --framework-color: #f13c01;
   --framework-button: #{darken(#f13c01, 10%)};
   --framework-text: #{darken(#f13c01, 50%)};
+}
+
+article > header {
+  width: 100%;
+  overflow:hidden;
+  img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }

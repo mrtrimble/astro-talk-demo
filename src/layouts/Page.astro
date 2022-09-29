@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import '../styles/style.scss';
 
 const { frontmatter } = Astro.props;
@@ -16,15 +17,27 @@ const { frontmatter } = Astro.props;
   <body>
     <main class="container">
       <article>
-        <h1>{frontmatter.title}</h1>
+        <header>
+          <h1>{frontmatter.title}</h1>
+          <Image
+            src={frontmatter.image}
+            format={'webp'}
+            alt={frontmatter.title}
+            height="600"
+            width="1200"
+            fit="cover"
+            position="center"
+            quality="100"
+          />
+        </header>
+        
         <slot />
       </article>
     </main>
+    <style>
+      .container {
+        --container-width: 50ch;
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  .container {
-    --container-width: 65ch;
-  }
-</style>
