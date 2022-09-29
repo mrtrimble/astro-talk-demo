@@ -23,8 +23,8 @@ section {
   }
 }
 
-main > header{
-  display:flex;
+main > header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -63,7 +63,7 @@ strong {
 
 article > header {
   width: 100%;
-  overflow:hidden;
+  overflow: hidden;
   img {
     margin: 0;
     padding: 0;
