@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/image": "^0.8.0",
     "@astrojs/mdx": "^0.11.2",
+    "@astrojs/netlify": "^1.1.0",
     "@astrojs/react": "^1.1.4",
     "@astrojs/svelte": "^1.0.0",
     "@astrojs/vue": "^1.0.2",
