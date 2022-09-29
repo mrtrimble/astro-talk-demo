@@ -27,15 +27,4 @@ input {
   flex-flow: column;
 }
 
-button[type="submit"] {
-  background: var(--framework-color);
-  color: var(--framework-text);
-  border: none;
-  border-radius: 0.5rem;
-  padding-block: 0.25rem;
-  padding-inline: 0.75rem;
-  transition: background 0.25s ease;
-  &:hover {
-    background: var(--framework-button);
-  }
-}
+

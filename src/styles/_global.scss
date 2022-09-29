@@ -1,5 +1,7 @@
 :root {
   --framework-color: #9f54f1;
+  --framework-button: #{darken(#9f54f1, 30%)};
+  --framework-text: #{darken(#9f54f1, 70%)};
 }
 
 body {
