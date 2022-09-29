@@ -23,6 +23,12 @@ section {
   }
 }
 
+main > header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .framework {
   color: var(--framework-color);
 }

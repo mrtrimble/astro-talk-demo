@@ -16,9 +16,14 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <main class="container">
+      <header>
+        <h1>{frontmatter.title}</h1>
+        <nav>
+          <a href="/">Fruits</a>
+        </nav>
+      </header>
       <article>
         <header>
-          <h1>{frontmatter.title}</h1>
           <Image
             src={frontmatter.image}
             format={'webp'}
@@ -30,14 +35,8 @@ const { frontmatter } = Astro.props;
             quality={100}
           />
         </header>
-        
         <slot />
       </article>
     </main>
-    <style>
-      .container {
-        --container-width: 50ch;
-      }
-    </style>
   </body>
 </html>
