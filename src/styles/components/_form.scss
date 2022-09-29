@@ -1,7 +1,12 @@
 form{
   display:flex;
-  align-items: flex-end;
+  flex-flow:column;
+  gap: 1rem;
   flex-wrap: wrap;
+  @media (min-width: 600px){
+    flex-flow: row;
+    align-items: flex-end;
+  }
 }
 
 label{
@@ -10,7 +15,7 @@ label{
 }
 
 input{
-  max-width: 100%;
+  width:100%;
   border: none;
   border-bottom: 4px solid var(--framework-color);
   background: white;
