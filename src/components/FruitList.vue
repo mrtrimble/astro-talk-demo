@@ -1,14 +1,14 @@
 <script setup>
-import { ref, reactive, computed } from 'vue';
+import { ref, reactive, computed } from "vue";
 
 const fruitToAdd = ref();
 
-const fruits = reactive([]);
+const fruits = reactive(["Apple", "Strawberry"]);
 
 const fruitsSorted = computed(() => {
   let array = Array.from(fruits);
   return array.sort((a, b) => a.localeCompare(b));
-})
+});
 
 const total = computed(() => {
   let total = Array.from(fruits);
@@ -21,28 +21,33 @@ const addFruit = (e) => {
   fruits.push(fruitToAdd.value);
   fruitToAdd.value = null;
 };
-
 </script>
 
 <template>
-  <div>
-    <h2>Vue Fruits!</h2>
-
+  <section id="vue-fruits">
+    <h2><span class="framework">Vue</span> Fruits</h2>
+    <p>Loads immediately on page load.</p>
     <form @submit="addFruit">
-      <input type="text" v-model="fruitToAdd" />
+      <div class="input-group">
+        <label for="vue-fruit">Fruit</label>
+        <input
+          type="text"
+          v-model="fruitToAdd"
+          id="vue-fruit"
+          name="vue-fruit"
+        />
+      </div>
       <button type="submit">Add Fruit</button>
     </form>
 
     <ul>
       <li v-for="(item, index) in fruitsSorted" :key="index">
-        {{item}}
+        {{ item }}
       </li>
     </ul>
-
-    <strong>Total Fruits:</strong> {{ total }}
-  </div>
+    <div><strong>Total Fruits:</strong> {{ total }}</div>
+  </section>
 </template>
 
 <style scoped lang="scss">
-
 </style>

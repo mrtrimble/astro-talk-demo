@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function FruitList() {
-  const [fruits, setFruits] = useState([]);
+  const [fruits, setFruits] = useState(['Mango', 'Peach']);
 
   const addFruit = (e) => {
     e.preventDefault();
@@ -9,14 +9,20 @@ function FruitList() {
     let value = e.target[0].value;
 
     setFruits([...fruits, value]);
-    document.getElementById('react-input').value = null;
+    document.getElementById('react-fruit').value = null;
   };
 
   return (
-    <div>
-      <h2>React Fruits!</h2>
+    <section id="react-fruits">
+      <h2>
+        <span className="framework">React</span> Fruits
+      </h2>
+      <p>Loads when viewport is greater than 600px.</p>
       <form onSubmit={addFruit}>
-        <input type="text" id="react-input" />
+        <div className="input-group">
+          <label htmlFor="react-fruit">Fruit</label>
+          <input type="text" id="react-fruit" name="react-fruit" />
+        </div>
         <button type="submit">Add Fruit</button>
       </form>
       <ul>
@@ -26,8 +32,10 @@ function FruitList() {
             <li key={fruit}>{fruit}</li>
           ))}
       </ul>
-      <strong>Total Fruits:</strong> {fruits.length}
-    </div>
+      <div>
+        <strong>Total Fruits:</strong> {fruits.length}
+      </div>
+    </section>
   );
 }
 

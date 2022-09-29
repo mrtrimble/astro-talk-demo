@@ -1,0 +1,56 @@
+:root {
+  --framework-color: steelblue;
+}
+
+body {
+  margin-block: 2rem;
+  background: #2d3436;
+  color: white;
+}
+
+section {
+  margin-block: 3rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  border-radius: 0.5rem;
+  background: darken(#2d3436, 3%);
+  > * {
+    margin: 0;
+    padding: 0;
+  }
+  > * + * {
+    margin-block-start: 1rem;
+  }
+}
+
+.framework {
+  color: var(--framework-color);
+}
+
+strong {
+  color: var(--framework-color);
+}
+
+#astro-fruits {
+  --framework-color: #9f54f1;
+  --framework-button: #{darken(#9f54f1, 30%)};
+  --framework-text: #{darken(#9f54f1, 70%)};
+}
+
+#vue-fruits {
+  --framework-color: #3fb280;
+  --framework-button: #{darken(#3fb280, 5%)};
+  --framework-text: #{darken(#3fb280, 50%)};
+}
+
+#react-fruits {
+  --framework-color: #5ed4f4;
+  --framework-button: #{darken(#5ed4f4, 15%)};
+  --framework-text: #{darken(#5ed4f4, 50%)};
+}
+
+#svelte-fruits {
+  --framework-color: #f13c01;
+  --framework-button: #{darken(#f13c01, 10%)};
+  --framework-text: #{darken(#f13c01, 50%)};
+}
