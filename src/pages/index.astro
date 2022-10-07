@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import VueFruitList from '../components/FruitList.vue';
-import ReactFruitList from '../components/FruitList';
-import SvelteFruitList from '../components/Fruitlist.svelte';
+// import VueFruitList from '../components/FruitList.vue';
+// import ReactFruitList from '../components/FruitList';
+// import SvelteFruitList from '../components/Fruitlist.svelte';
 
 const fruits = [
   'Strawberry',
@@ -29,7 +29,6 @@ fruits.sort((a, b) => a.localeCompare(b));
     </nav>
   </header>
 
-  <!-- Astro -->
   <section id="astro-fruits">
     <h2><span class="framework">Astro</span> Fruits</h2>
     <p>Renders as plain HTML.</p>
@@ -42,17 +41,17 @@ fruits.sort((a, b) => a.localeCompare(b));
     </div>
   </section>
 
-  <!-- Vue -->
-  <VueFruitList client:idle />
+  <!-- Vue client:idle -->
+  <!-- <VueFruitList /> -->
 
   <!-- React -->
-  <ReactFruitList client:media="(min-width: 600px)" />
+  <!-- <ReactFruitList client:media="(min-width: 600px)" /> -->
 
   <!-- Svelte -->
-  <SvelteFruitList client:visible />
+  <!-- <SvelteFruitList client:visible /> -->
 
 	<!-- Vanilla JavaScript -->
-  <button id="test">
+  <!-- <button id="test">
 		Vanilla JavaScript Button
-	</button>
+	</button> -->
 </Layout>
